@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hangman game</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Google fonts -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Bigelow+Rules" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+	<!-- Custom stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row row-header text-center">
+			<div class="col-md-12 col-header">
+				<h1> Dance like noone is watching!</h1>
+				<h3> Play like you are only winning! </h3>
+			</div>
+		</div>
+		<div class="row row-main text-center">
+			<div class="col-md-3">			
+<!-- 				<div class="gif-image text-center">
+					<img src="assets/images/ballet.gif" class="img-thumbnail">
+				</div> -->
+			</div>
+			<div class="col-md-6 col-main">
+				<div id="status">
+					Press any key to Begin....
+				</div>
+				<div id="placeholder">
+					<h3>xxxx</h3>
+				</div>
+				<div>
+					Guesses remaining
+					<h3 id="chances">6</h3>
+				</div>
+				<div>
+					Letters guessed
+					<h3 id="guesses"></h3>
+				</div>
+
+				<div> Wins
+					<span id="wins" style="margin-right: 25px">0</span>
+					Losses 
+					<span id="losses">0</span>
+				</div>
+			</div>
+			<div class="col-md-3 col-image py-3">
+					<div class="text-center">
+						<img src="assets/images/Hangman0.gif" class="img-thumbnail" id="gif-image" >
+					</div>
+					<div class="gif-image text-center">
+						<img src="assets/images/ballet.gif" class="img-thumbnail">
+					</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/gameobj.js"></script>
+	<script src="assets/js/game.js"></script>
+
+</body>
+</html>

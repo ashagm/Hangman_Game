@@ -1,0 +1,35 @@
+body{
+	/*font-family: 'Bigelow Rules', cursive;*/
+	font-family: 'Cinzel Decorative', cursive;
+
+}
+
+div.container{
+	background: url('../images/bg.jpg') center no-repeat;
+	background-size: cover;	
+	width: 100vw;
+	height: 100vh;
+}
+
+.row-header{
+	border-bottom: 3px solid black;
+}
+
+.col-md-12 h1{
+	font-size: 68px;
+
+}
+
+.col-md-12 h3{
+	font-size: 28px;
+}
+
+.col-main{
+	/*border: 1px solid black;*/
+}
+
+.col-main div{
+	font-size: 40px;
+	font-weight: bold;	
+	margin: 20px;	
+}
