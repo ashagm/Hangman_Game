@@ -1,5 +1,4 @@
 body{
-	/*font-family: 'Bigelow Rules', cursive;*/
 	font-family: 'Cinzel Decorative', cursive;
 
 }
@@ -8,28 +7,22 @@ div.container{
 	background: url('../images/bg.jpg') center no-repeat;
 	background-size: cover;	
 	width: 100vw;
-	height: 100vh;
+	max-height: 100vh;
 }
 
-.row-header{
-	border-bottom: 3px solid black;
-}
-
-.col-md-12 h1{
-	font-size: 68px;
-
-}
-
-.col-md-12 h3{
-	font-size: 28px;
-}
-
-.col-main{
-	/*border: 1px solid black;*/
-}
+.row-header{ border-bottom: 3px solid black; }	
+.row-header .col-md-12 h1{ font-size: 64px; }
+.row-header .col-md-12 h3{ font-size: 38px; }
 
 .col-main div{
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: bold;	
-	margin: 20px;	
+	margin: 10px;	
+	/*border : 1px solid black;*/
+	height: 100px;
+}
+
+.col-image div{
+	margin: 30px;
+	border: 1px solid black;
 }

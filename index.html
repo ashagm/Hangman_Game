@@ -8,12 +8,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Google fonts -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Bigelow+Rules" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
 	<!-- Custom stylesheet -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-
 </head>
 <body>
 
@@ -25,43 +22,46 @@
 			</div>
 		</div>
 		<div class="row row-main text-center">
-			<div class="col-md-3">			
-<!-- 				<div class="gif-image text-center">
-					<img src="assets/images/ballet.gif" class="img-thumbnail">
-				</div> -->
-			</div>
+			<div class="col-md-3"></div>
 			<div class="col-md-6 col-main">
-				<div id="status">
-					Press any key to Begin....
+				<div id="status" class="pt-2">
+					Press any key to Dance....
 				</div>
-				<div id="placeholder">
-					<h3>xxxx</h3>
-				</div>
-				<div>
-					Guesses remaining
-					<h3 id="chances">6</h3>
+				<div class="pt-2">
+					<h3 id="placeholder"></h3>
 				</div>
 				<div>
-					Letters guessed
+					Moves remaining
+					<h3 id="chances">5</h3>
+				</div>
+				<div>
+					Moves tried
 					<h3 id="guesses"></h3>
 				</div>
-
-				<div> Wins
-					<span id="wins" style="margin-right: 25px">0</span>
-					Losses 
-					<span id="losses">0</span>
+				<div> 
+					<table class="table table-sm">
+					    <tr>
+					      	<td></td><td>Wins</td><td>Losses</td><td></td>      
+					    </tr>
+					    <tr>
+							<td></td><td id="wins">0</td><td id="losses">0</td><td></td>	
+					    </tr>
+					</table>
 				</div>
 			</div>
 			<div class="col-md-3 col-image py-3">
-					<div class="text-center">
-						<img src="assets/images/Hangman0.gif" class="img-thumbnail" id="gif-image" >
-					</div>
-					<div class="gif-image text-center">
-						<img src="assets/images/ballet.gif" class="img-thumbnail">
-					</div>
-				
+				<div class="text-center">
+					<img src="assets/images/Hangman0.gif" class="img-thumbnail" id="gif-image" >
+				</div>
+				<div class="text-center">
+					<img src="assets/images/dance.gif" class="img-thumbnail" id="dance-image">
+				</div>	
+				<div class="align-bottom">
+					Copyright Asha Tad
+				</div>			
 			</div>
 		</div>
+
 	</div>
 
 	<script src="assets/js/gameobj.js"></script>
