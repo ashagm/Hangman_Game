@@ -14,7 +14,6 @@ const hangman = {
 		'win': 'assets/images/Hangman-win.gif',
 		'lose': 'assets/images/Hangman-lose.gif'
 	}],
-
 	sounds : [{
 		'right': "assets/sounds/correct.wav",
 		'beep' : "assets/sounds/beep.wav",
@@ -27,7 +26,6 @@ const hangman = {
 	updateChances : function(){	
 		this.chances--;	
 		getEl('chances').innerHTML = this.chances;
-		// console.log('updateChances()', this.chances);
 		this.updateImages(this.chances);
 	},
 
@@ -69,13 +67,12 @@ const game = {
 	missedChars : [],
 	guessedChars : [],
 	placeholderChars : [],
-	'indexOfWord' : 0,
+	indexOfWord : -1,
 
-	pickRandomWord: function(){
-		let index = Math.floor(Math.random() * (data.length));
-		this['indexOfWord'] = index;
-		data[index].used = true; //set the word as already picked
-		return data[index].name;
+	pickAWord: function(){
+		this.indexOfWord = (this.indexOfWord < (data.length -1)) ? ++this.indexOfWord : 0;	
+		// console.log(this.indexOfWord);
+		return data[this.indexOfWord].name;
 	},
 
 	printPlaceHolder: function(word){
@@ -99,8 +96,6 @@ const game = {
 	},
 
 	insertChars: function(char, word){
-		// console.log("in insertChars()", char,"-", word);
-
 		//split word into array 
 		let strToArr = word.split("");
 
@@ -148,7 +143,7 @@ var hangmanWord = "";
 
 //Listen to any keyed in event
 window.addEventListener('keyup', function(event) {
-    console.log("You typed -- " + event.key);
+    // console.log("You typed -- " + event.key);
 
     //Ensuring only characters are accepted
     let pickedChar = event.key;
@@ -164,12 +159,15 @@ window.addEventListener('keyup', function(event) {
 				//here all letters done
 				hangman.updateImages('win');
 				hangman.playSounds('win');
-				game.updateStatus("You got it Right!!", "green");
+				game.updateStatus("Beautifully danced!", "green");
 				game.updateGifs(hangmanWord);
+				// console.log("****beginGame()---1");
 				setTimeout('beginGame()', 3000);
 			}else if(hangman.chances < 0){
 				hangman.playSounds('lost');
-				game.updateStatus("Sorry, you lost. Play again!", "red");
+				getEl('dance-image').src = "assets/images/saddance.gif";
+				game.updateStatus("You missed the step! Try again!", "red");
+				// console.log("****beginGame()---2");
 				setTimeout('beginGame()', 3000);
 			}
 		}else{
@@ -183,8 +181,10 @@ window.addEventListener('keyup', function(event) {
 			}
 
 			if(hangman.chances <= 0){
-				game.updateStatus("Sorry, you lost. Play again!", "red");
+				getEl('dance-image').src = "assets/images/saddance.gif";
+				game.updateStatus("You missed the step! Try again!", "red");
 				hangman.playSounds('lost');
+				// console.log("****beginGame()---3");
 				setTimeout('beginGame()', 3000);
 			}
 		}
@@ -206,7 +206,8 @@ function beginGame(){
 	hangman.playSounds('start');
 
 	//pick a word to play
-	hangmanWord = game.pickRandomWord();
+	hangmanWord = game.pickAWord();
+
 	console.log("Word to play ", hangmanWord);
 
 	//print the placeholder on screen
