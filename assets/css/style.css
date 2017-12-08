@@ -22,6 +22,12 @@ div.container{
 	height: 100px;
 }
 
+.col-main h2{
+	font-size: 38px;
+	font-weight: bolder;
+
+}
+
 .col-image div{
 	margin: 30px;
 	border: 1px solid black;
