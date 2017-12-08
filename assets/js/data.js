@@ -98,3 +98,15 @@ const data =
 			hint: "France"			
 		}	
 	];
+
+
+const sounds = 
+	{
+		'right': "assets/sounds/correct.wav",
+		'beep' : "assets/sounds/beep.wav",
+		'start': "assets/sounds/start.mp3", 
+		'error' : "assets/sounds/error.wav", 
+		'win': "assets/sounds/win.wav",
+		'loss': "assets/sounds/lost.wav"
+	}
+

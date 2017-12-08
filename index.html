@@ -6,6 +6,7 @@
 	<title>Hangman game</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<!-- font awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Google fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
@@ -28,7 +29,7 @@
 					Press any key to Dance....
 				</div>
 				<div class="pt-2">
-					<h3 id="placeholder"></h3>
+					<h2 id="placeholder"></h2>
 				</div>
 				<div>
 					Moves remaining
@@ -39,7 +40,7 @@
 					<h3 id="guesses"></h3>
 				</div>
 				<div> 
-					<table class="table table-sm">
+					<table class="table table-sm borderless">
 					    <tr>
 					      	<td></td><td>Wins</td><td>Losses</td><td></td>      
 					    </tr>
@@ -51,20 +52,22 @@
 			</div>
 			<div class="col-md-3 col-image py-3">
 				<div class="text-center">
-					<img src="assets/images/Hangman0.gif" class="img-thumbnail" id="gif-image" >
+					<img src="" class="img-thumbnail" id="gif-image" >
 				</div>
 				<div class="text-center">
 					<img src="assets/images/dance.gif" class="img-thumbnail" id="dance-image">
-				</div>	
-				<div class="align-bottom">
-					Copyright Asha Tad
-				</div>			
+				</div>		
+			</div>
+		</div>
+		<div class="row footer text-center">
+			<div class="col-md-12 ">
+				Made with <i class="fa fa-heart" aria-hidden="true"></i> by Asha Tad
 			</div>
 		</div>
 
 	</div>
 
-	<script src="assets/js/gameobj.js"></script>
+	<script src="assets/js/data.js"></script>
 	<script src="assets/js/game.js"></script>
 
 </body>

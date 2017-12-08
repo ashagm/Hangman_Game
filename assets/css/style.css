@@ -26,3 +26,12 @@ div.container{
 	margin: 30px;
 	border: 1px solid black;
 }
+
+div.col-main .table td {
+    border-top: none;
+}
+
+.footer{
+	height: 30px;
+	border-top: 1px solid #000;
+}
