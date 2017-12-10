@@ -178,6 +178,10 @@ var gameController = {
 		getEl('dance-image').src = data[this.indexOfWord].image;
 	},
 
+	showHint : function(){
+		getEl('hint').innerHTML = "From " + data[this.indexOfWord].hint;
+	},
+
 	//init resets the game and picks the hangman word to play
 	initGame : function(){
 		this.resetGame(); 
@@ -191,6 +195,7 @@ var gameController = {
 		playSound('start');
 		getEl('dance-image').src = "assets/images/dance.gif";
 		displayStatus('Press any key to Dance!', '#000');
+		getEl("hint").innerHTML = "Click here for Hint";
 	}
 }
 
@@ -208,6 +213,11 @@ window.addEventListener('keyup', function(event) {
 	else{
 		displayStatus("Pick only letters from a-z", "red");
 	}		
+});
+
+//adding a hint button - //todo in a better way
+getEl("hint").addEventListener('click', function(event){
+	gameController.showHint();
 });
 
 //moved this outside of object to be accessible to all

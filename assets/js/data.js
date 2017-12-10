@@ -23,7 +23,7 @@ const data =
 			id: 3,
 			name: "waltz",
 			image: "assets/images/waltz.gif",
-			hint: "German"			
+			hint: "Germany"			
 		},
 		{	
 			id: 4,
@@ -71,7 +71,7 @@ const data =
 			id: 11,
 			name: "polka",
 			image: "assets/images/polka.gif",
-			hint: ""			
+			hint: "Czech Republic"			
 		},
 		{	
 			id: 12,
